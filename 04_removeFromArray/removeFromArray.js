@@ -13,12 +13,19 @@ const removeFromArray = function (ary, ...removes) {
     //     return newAry;
     // };
 
-    for (remove of removes) {
-        const removeIndex = ary.indexOf(remove);
+    for (remove of removes) {                              // for each remove given in removes
+        const removeIndex = ary.indexOf(remove);           // finds the index (if present) 
         if (removeIndex >= 0) ary.splice(removeIndex, 1);  // splice takes 2 parameters, position and number of values to remove. needs if statement to ignore non present vals
     }
 
     return ary;
+
+    // ary.forEach ((remove) => {                            // this code does not work, not sure why. looks to be the same as for of?
+    //     const removeIndex = ary.indexOf(remove);           
+    //     if (removeIndex >= 0) ary.splice(removeIndex, 1);  
+    // });
+
+    // return ary;
 };
 
 // Do not edit below this line
