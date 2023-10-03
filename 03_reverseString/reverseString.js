@@ -2,8 +2,8 @@ const reverseString = function (string) {
     let newString = []; //creates empty array for reversed letters to be added
     let seperate = string.split(""); //splits the given string into an array with individual letters
 
-    for (let i = 0; i <= seperate.length; i++) { //i for each position up to the string length
-        newString.unshift(seperate[i]); //array newString the existing letter in position i added to the front, reversing the string
+    for (value of seperate) { //value for each position up to the string length
+        newString.unshift(value); // array newString each value added to the front, reversing the string
                                         
     }
 
