@@ -9,7 +9,7 @@ const removeFromArray = function (array, ...args) {
     // push every element into the new array
     // UNLESS it is included in the function arguments
     // so we create a new array with every item, except those that should be removed
-    if (!args.includes(item)) {
+    if (!args.includes(item)) {           // if the value in the array is not included in args, then push. This way it does not have repeated values copied over, as is looped once
       newArray.push(item);
     }
   });
@@ -21,7 +21,7 @@ const removeFromArray = function (array, ...args) {
 // which basically does what we did with the forEach above.
 
 // var removeFromArray = function(array, ...args) {
-//   return array.filter(val => !args.includes(val))
+//   return array.filter(val => !args.includes(val))        // returns each element only if conditions = true for !args.includes(val), aka value is not included in args
 // }
 //
 
