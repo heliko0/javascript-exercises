@@ -1,16 +1,20 @@
-const sumAll = function (a, b) {
-    let total = 0;
-    let left = a;
-    let right = b;
+const sumAll = function (min, max) {
+    if (
+        min < 0 ||
+        max < 0 ||
+        Number.isInteger(min) === false ||
+        Number.isInteger(max) === false
+    )
+        return "ERROR";
 
-    if (left > right) {
-        right = a;
-        left = b;
+    if (min > max) {
+        const temp = min;
+        min = max;
+        max = temp;
     }
 
-    if (left < 0 || right < 0 || Number.isInteger(left) === false || Number.isInteger(right) === false) return "ERROR";
-
-    for (i = left; i <= right; i++) {
+    let total = 0;
+    for (i = min; i <= max; i++) {
         total += i;
     }
 
